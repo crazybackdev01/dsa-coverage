@@ -1,0 +1,76 @@
+# ==========================================
+# Prerequisites & Core Build Artifacts
+# ==========================================
+*.d
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+
+# Compiled Libraries
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.la
+*.lai
+
+# Executables
+*.exe
+*.out
+*.app
+
+# ==========================================
+# Build Directories & Toolchains
+# ==========================================
+# Common build directory names
+[Bb]uild/
+[Cc]make-build-*/
+[Cc]ache/
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CMakeUserPresets.json
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+Makefile
+CTestTestfile.cmake
+
+# vcpkg / Conan package managers
+vcpkg_installed/
+.conan/
+conan-build/
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# CLion / JetBrains
+.idea/
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Backup & Temporary files
+*.swp
+*.bak
+*~
+*.log
