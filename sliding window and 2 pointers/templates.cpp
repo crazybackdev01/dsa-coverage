@@ -137,13 +137,34 @@ int longestSubstringKDistinct(const string &str, int k)
 //  Find all anagrams of a pattern inside a string.
 vector<int> findAnagrams(const string &s, const string &p)
 {
+    vector<int> ans;
     if (p.size() > s.size())
     {
-        return {-1};
+        return ans;
     }
     int k = p.size();
-    int left = 0;
-    vector<int> ans;
+    vector<int> need(26, 0);
+    vector<int> window(26, 0);
+
+    for (unsigned char c : p)
+    {
+        need[c - 'a']++;
+    }
+
+    for (int right = 0; right < s.size(); right++)
+    {
+        window[s[right] - 'a']++;
+        if (right >= k)
+        {
+            window[s[right - k] - 'a']--;
+        }
+        if (right >= k - 1 && window == need)
+        {
+            ans.push_back(right - (k - 1));
+        }
+    }
+
+    return ans;
 }
 
 int main()
